@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+"""defines a function"""
+
 
 def to_str(n: float) -> str:
     """
