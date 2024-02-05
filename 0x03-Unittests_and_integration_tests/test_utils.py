@@ -24,5 +24,17 @@ class TestAccessNestedMap(unittest.TestCase):
     ])
     def test_access_nested_map_exception(self, nested_map: Mapping,
                                          path: Sequence) -> None:
+        """
+        Test case to verify that accessing a nested map with an invalid
+        path raises a KeyError.
+
+        Args:
+            nested_map (Mapping): The nested map to access.
+            path (Sequence): The path to the desired value in the nested map.
+
+        Raises:
+            AssertionError: If accessing the nested map with the given
+            path does not raise a KeyError.
+        """
         with self.assertRaises(KeyError):
             utils.access_nested_map(nested_map, path)
